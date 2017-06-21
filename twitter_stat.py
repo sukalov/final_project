@@ -99,11 +99,13 @@ def plot_draw(sd):
         os.remove('static/graph.png')
     except FileNotFoundError:
         pass
+
     X = []
     Y = []
     for elem in sd:
         X.append(elem[0])
         Y.append(elem[1])
+
 
     plt.plot(Y)
     plt.ylabel('количество упоминаний слова')
@@ -111,7 +113,7 @@ def plot_draw(sd):
     plt.xticks(range(len(sd)), [n[0] for n in sd], rotation='vertical')
     plt.subplots_adjust(bottom=0.25)
     plt.savefig('static/graph.png', format='png', dpi=100)
-
+    plt.cla()
     plt.clf()
 
 app = Flask(__name__)
