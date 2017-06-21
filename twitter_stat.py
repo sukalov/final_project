@@ -1,11 +1,13 @@
-import json
 import tweepy
 import datetime
 import time
+import os
 from credentials import *
 from flask import Flask
 from flask import url_for, render_template, request, redirect
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 from matplotlib import style
 style.use('ggplot')
 
@@ -36,7 +38,7 @@ def twitter_search(word):
                                     mon = '0' + str(tweet.created_at.month)
                                 else:
                                     mon = str(tweet.created_at.month)
-                                    
+
                                 date = day + '.' + mon + '.' + str(tweet.created_at.year)
                                 if date in tweetcount:
                                         tweetcount[date] += 1
@@ -79,20 +81,24 @@ def add_empty(tc):
             mindate = realdate(date)
         elif realdate(date) > maxdate:
             maxdate = realdate(date)
-        
+
     d = mindate
     delta = datetime.timedelta(days=1)
     tc2 = tc
-    
+
     while d < maxdate:
         d += delta
         if strdate(d) not in tc2:
             tc2[strdate(d)] = 0
 
     return tc2
-       
+
 
 def plot_draw(sd):
+    try:
+        os.remove('static/graph.png')
+    except FileNotFoundError:
+        pass
     X = []
     Y = []
     for elem in sd:
@@ -106,6 +112,7 @@ def plot_draw(sd):
     plt.subplots_adjust(bottom=0.25)
     plt.savefig('static/graph.png', format='png', dpi=100)
 
+    plt.clf()
 
 app = Flask(__name__)
 

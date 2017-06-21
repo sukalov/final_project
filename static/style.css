@@ -1,7 +1,7 @@
 	.parent {position: relative;}
-  	
+
   	.intro {
-  	font: 15pt serif;   
+  	font: 15pt serif;
  	 width:  600px;
 	 padding: 15px;
 	 left: 28%;
@@ -9,13 +9,9 @@
  	 top: 10%;
  	 border: 2px solid rgb(100,100,100);
  	  background-color: rgb(238,238,238);}
- 	  
- 	 .answer_block {
- 	 position: relative;
- 	 right: -4.5%; }
- 	  
+
  	 .part{
- 	 font: 12pt serif;   
+ 	 font: 12pt serif;
  	 width:  50px;
 	 padding: 5px;
 	 left: 47.5%;
@@ -23,13 +19,13 @@
  	 top: 37%;
  	 border: 2px solid rgb(100,100,100);
  	 background-color: rgb(240,200,200);}
- 	 
+
  	 .select_block {
  	 background-color: rgb(250,250,250);}
- 	 
+
  	 .note_block {
- 	 
- 	 font: 11pt serif;   
+
+ 	 font: 11pt serif;
  	 width:  460px;
 	 padding: 10px 10px 0 10px;
 	 left: 33.4%;
@@ -37,9 +33,9 @@
  	 bottom: 6%;
  	 border: 2px solid rgb(100,100,100);
  	 background-color: rgb(238,238,238);}
- 	 
+
 	.pagecenter {
-     font: 15pt serif;   
+     font: 15pt serif;
  	 width:  700px;
 	 padding: 30px;
 	 position: absolute;
@@ -49,26 +45,36 @@
    	 border: 2px solid rgb(100,100,100);
  	 background-color: rgb(240,230,230);}
 
- 	  
-	.submit {position:absolute; bottom: 5%; left: 45.5%;}
-	.submit2 {position:absolute; bottom: 2%; left: 45.5%;}
-	.submit3 {bottom: 0%;}
+ 	 .pagecenter2 {
+     font: 15pt serif;
+ 	 width:  700px;
+	 padding: 30px;
+	 position: relative;
+ 	 top: 30%;
+ 	 left: 35.3%;
+ 	 margin: -70px 0 70px -170px;
+   	 border: 2px solid rgb(100,100,100);
+ 	 background-color: rgb(240,230,230);}
+
+
+	.submit {position:absolute; bottom: 11%; left: 45.5%;}
+	.submit2 {position:absolute; bottom: 1%; left: 43.9%;}
 	.finish_submit {position: relative;}
-	
+
 	.finish_block {
 	 padding: 15px 35px 15px 0;
-	 font: 20pt serif;   
+	 font: 20pt serif;
  	 width:  300px;
  	 top: 42%;
  	 left: 50%;}
- 	 
- 	.graph {top : 45%}
- 	
-	
+
+ 	.graph {top : 38%; position: absolute;}
+
+
 	.page {background-color: rgb(220,220,220);}
-	
+
 	.header1 {font: 40pt serif; color: rgb(100,100,100);}
-	
+
 	.button15 {
   display: inline-block;
   font-family: arial,sans-serif;
@@ -82,15 +88,7 @@
   border-radius: 2px;
   background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
   transition: all .218s ease 0s;}
-  
-  	.fini_part{
- 	 font: 12pt serif;   
- 	 width:  50px;
-	 padding: 5px;
-	 left: 47.5%;
-	 position: absolute;
- 	 top: 27.8%;}
- 	 
+
 	.button15:hover {
   color: rgb(24,24,24);
   border: 1px solid rgb(198,198,198);
@@ -102,5 +100,3 @@
   border: 1px solid rgb(204,204,204);
   background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
   box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;}
-
-	.big15 { font-size: 20px; width: 200px;}
